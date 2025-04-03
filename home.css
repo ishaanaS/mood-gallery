@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Pantasia Regular';
+   
+  }
+  
+  @font-face {
+    font-family: 'Pantasia Regular';
+    src: url('fonts/PantasiaUnlicencedTrial-Regular.otf') format('opentype'),
+         url('fonts/PantasiaUnlicencedTrial-Regular.ttf') format('truetype');
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    position: relative;
+  }
+  
+  .text {
+    position: relative;
+    width: 100%;
+    bottom: -280px;
+    letter-spacing: -4px;
+  }
+  
+  .word {
+    font-size: 4.9rem; /* Adjust font size as needed */
+    position: absolute;
+  }
+  
+  .left {
+    left: 2%; /* Position for "The" */
+  }
+  
+  .center {
+    left: 60%; /* Position for "Art" */
+  }
+  
+  .right {
+    right: 3%; /* Position for "Vault" */
+  }
+    
+  .submit-button {
+    position: absolute;
+    bottom: 280px;
+    right: 32.5%; /* Adjust this value to move it more to the middle */
+    letter-spacing: -1px;
+    padding: 10px 30px;
+    background-color: #6c7cff; /* Button background color */
+    color: white; /* Text color */
+    border: none;
+    text-decoration: none; /* Remove underline from link */
+    text-align: center;
+    display: inline-block;
+    
+    font-size: 1rem; /* Font size */
+    
+    cursor: pointer;
+    
+    transition: all ease-in-out .3s;
+  }
+  
+  .submit-button:hover {
+    background-color: #000000; /* Slightly darker on hover */
+    transform: scale(1.05);
+  }
