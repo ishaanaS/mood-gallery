@@ -1,10 +1,10 @@
-// Get DOM elements
+
 const slider = document.getElementById('moodSlider');
 const moodText = document.getElementById('moodText');
 const submitButton = document.querySelector('.submit-button');
 const closeButton = document.querySelector('.close-button');
 
-// Update mood text based on slider value
+// mood text based on slider value
 function updateMoodText(value) {
   if (value < 33) {
     moodText.textContent = "Happy";
@@ -15,15 +15,15 @@ function updateMoodText(value) {
   }
 }
 
-// Set initial text
+
 updateMoodText(slider.value);
 
-// Update when slider changes
+
 slider.addEventListener('input', function() {
   updateMoodText(this.value);
 });
 
-// Define artist pages for each mood
+
 const artistPages = {
   'Happy': {
     artist: 'Vincent van Gogh',
@@ -51,26 +51,24 @@ const artistPages = {
   }
 };
 
-// Handle form submission
+// submission
 submitButton.addEventListener('click', function() {
   const moodValue = slider.value;
   const moodDescription = moodText.textContent;
   
-  // Show an alert with the selected mood
+  //  alert with the selected mood
   alert(`mood submitted: ${moodDescription} (${moodValue})`);
   
-  // Create a session storage item to pass the mood to the next page
+
   sessionStorage.setItem('selectedMood', moodDescription);
   
-  // Redirect to the artist page after the alert is dismissed
+
   setTimeout(() => {
     window.location.href = 'artist-page.html';
   }, 500);
 });
 
-// Close button functionality
+
 closeButton.addEventListener('click', function() {
-  // You can add code here to handle closing the modal
-  // For example, redirect to another page or hide the modal
   alert('are you sure?');
 });
