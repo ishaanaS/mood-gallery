@@ -1,7 +1,7 @@
 const paintings = [
     { title: "Painting 1", src: "images-input/W.jpg", year: 1951, category: "expressionism" },
     { title: "Painting 2", src: "images-input/Y.jpg", year: 1890, category: "modern" },
-    { title: "Painting 3", src: "images-input/L.jpg", year: 1970, category: "contemporary" },
+    { title: "Painting 3", src: "images-input/L.jpg", year: 1970, category: "expressionism" },
     { title: "Painting 4", src: "images-input/B.png", year: 1890, category: "impressionism" },
     { title: "Painting 5", src: "images-input/F.webp", year: 1951, category: "modern" },
     { title: "Painting 6", src: "images-input/D.jpg", year: 1951, category: "abstract" },
