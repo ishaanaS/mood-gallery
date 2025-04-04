@@ -15,6 +15,9 @@ const paintings = [
     { title: "Painting 14", src: "images-input/dance.avif", year: 1970, category: "contemporary" },
     { title: "Painting 15", src: "images-input/lapointe.jpg", year: 1890, category: "impressionism" },
     { title: "Painting 16", src: "images-input/melancholy.jpg", year: 1890, category: "expressionism" },
+    { title: "Painting 17", src: "mood-gallery/images-input/cont.jpg", year: 1970, category: "contemporary" },
+    { title: "Painting 18", src: "mood-gallery/images-input/cont2.jpg", year: 1970, category: "contemporary" },
+    { title: "Painting 19", src: "mood-gallery/images-input/cont 3.jpg", year: 1970, category: "contemporary" },
 ];
 
 
