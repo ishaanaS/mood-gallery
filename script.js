@@ -64,7 +64,7 @@ function scatterPaintings() {
         painting.style.left = `${Math.random() * maxX}px`;
         painting.style.top = `${Math.random() * (maxY - minY) + minY}px`;
         
-        // Slight rotation - between -5 and +5 degrees
+        // rotation 
         const rotation = (Math.random() - 0.5) * 30;
         painting.style.transform = `rotate(${rotation}deg)`;
     });
@@ -72,11 +72,9 @@ function scatterPaintings() {
 
 // scatter button 
 if (scatterBtn) {
-    // Remove old event listener by replacing it
+   
     scatterBtn.replaceWith(scatterBtn.cloneNode(true));
-    // Get the new button
     const newScatterBtn = document.getElementById('organize-btn');
-    // Add new event listener
     newScatterBtn.addEventListener('click', scatterPaintings);
 }
 

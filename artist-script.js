@@ -1,4 +1,4 @@
-// Artist data for each mood
+// artist data 
 const artistData = {
     'Happy': {
       artist: 'Keith Haring',
@@ -29,39 +29,33 @@ const artistData = {
     }
   };
   
-  // Get the selected mood from session storage
   const selectedMood = sessionStorage.getItem('selectedMood') || 'Neutral';
   
-  // Get DOM elements
   const artistName = document.getElementById('artist-name');
-  const artworkTitle = document.getElementById('artwork-title'); // Add this line
+  const artworkTitle = document.getElementById('artwork-title'); 
   const artistEra = document.getElementById('artist-era');
   const artistMovement = document.getElementById('artist-movement');
   const artistDescription = document.getElementById('artist-description');
   const artistPortrait = document.getElementById('artist-portrait');
   const artworkImage = document.getElementById('artwork-image');
-  
-  // Update page with the appropriate artist data
+
   function updateArtistPage(mood) {
     const data = artistData[mood];
     
-    // Update text content
     artistName.textContent = data.artist;
-    artworkTitle.textContent = data.title; // Add this line
+    artworkTitle.textContent = data.title; 
     artistEra.textContent = data.era;
     artistMovement.textContent = data.movement;
     artistDescription.textContent = data.description;
     
-    // Update images
     artistPortrait.src = data.artistImage;
     artistPortrait.alt = `Portrait of ${data.artist}`;
     
     artworkImage.src = data.image;
-    artworkImage.alt = `${data.title} by ${data.artist}`; // Update alt text to include title
+    artworkImage.alt = `${data.title} by ${data.artist}`; 
     
-    // Update page title
-    document.title = `The Art Vault - ${data.artist} - ${data.title}`; // Add title to page title
+    document.title = `The Art Vault - ${data.artist} - ${data.title}`; 
   }
   
-  // Initialize the page with the selected mood
+
   updateArtistPage(selectedMood);
