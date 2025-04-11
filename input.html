@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>the art vault - Your Artist Story</title>
+  <link rel="stylesheet" href="input.css">
+</head>
+<body>
+  <div class="header">
+    <h1>Your Artist Story</h1>
+  </div>
+  
+  <div class="modal-container">
+    <button class="close-button">×</button>
+    <div class="modal-content">
+      <div class="main-row">
+        <div class="question">
+          How are you<br>feeling today?
+        </div>
+        
+        <div class="slider-container">
+          <input type="range" min="1" max="100" value="50" class="slider" id="moodSlider">
+          <div class="faces">
+            <div class="face">
+              <img src="images-input/smile-svgrepo-com.svg" alt="Happy" class="mood-svg">
+            </div>
+            <div class="face">
+              <img src="images-input/neutral-svgrepo-com.svg" alt="Neutral" class="mood-svg">
+            </div>
+            <div class="face">
+              <img src="images-input/sad-svgrepo-com.svg" alt="Sad" class="mood-svg">
+            </div>
+          </div>
+          <div class="mood-text" id="moodText">Neutral</div>
+        </div>
+      </div>
+      
+      <div class="button-container">
+        <button class="submit-button">Submit</button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <h2>THE ART VAULT</h2>
+  </div>
+
+  <script src="input.js"></script>
+</body>
+</html>

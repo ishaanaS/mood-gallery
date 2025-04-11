@@ -1,0 +1,108 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    background-image: radial-gradient(#b5b5b5 1px, transparent 1px);
+    font-family: 'Pantasia Regular';
+    letter-spacing: -1px;
+    overflow-x: hidden;
+}
+@font-face {
+    font-family: 'Pantasia Regular';
+    src: url('fonts/PantasiaUnlicencedTrial-Regular.otf') format('opentype'),
+         url('fonts/PantasiaUnlicencedTrial-Regular.ttf') format('truetype');
+  }
+
+body {
+    margin-bottom: 20px;
+}
+
+.head {
+    position: fixed;
+    font-size: 17px;
+    letter-spacing: -1px;
+    width: 300px;
+    font-weight: 300;
+    margin-left: 20px;
+    margin-top: 25px;
+    z-index: 1000;
+    background-color: white;
+}
+
+#sidebar {
+    margin-top: 170px;
+    width: 250px;
+    padding: 20px;
+    position: fixed;
+    height: 100%;
+    z-index: 1000;
+}
+
+#gallery {
+    margin-left: 270px; /* space for sidebar */
+}
+
+.painting {
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    border-radius: 7px;
+    object-fit: cover;
+    transition: all 0.5s ease;
+    transition: opacity 0.4s ease, transform 0.5s ease, top 0.5s ease, left 0.5s ease;
+    
+}
+
+#organize-btn {
+    position: fixed;
+    bottom: 53vh;
+    left: 20px;
+    padding: 8px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+    background-color:  #6c7cff;
+    transition: ease-in-out 0.70s;
+    border: none; 
+    outline: none;
+}
+
+#organize-btn:hover {
+    color: white;
+    background-color: rgb(0, 0, 0);
+    transform: scale(1.05);
+    cursor: pointer;
+}
+.filter-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+    flex-wrap: nowrap;
+}
+
+.filter-container label {
+    margin-right: 20px; /*  space b/w the label and dropdown */
+    white-space: nowrap; 
+    min-width: 80px; 
+}
+
+.filter-container select {
+    flex: 1; /* take up remaining space */
+}
+.footer {
+    margin-top: 30px;
+    position: fixed;
+    bottom: 0;
+    left: -10px;
+    width: 100%;
+    padding: 10px;
+    
+  }
+  
+  .footer h4 {
+    font-size: 2rem;
+    font-style: normal;
+    margin-left: 20px;
+  }

@@ -1,0 +1,165 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Pantasia Regular';
+}
+
+@font-face {
+  font-family: 'Pantasia Regular';
+  src: url('fonts/PantasiaUnlicencedTrial-Regular.otf') format('opentype'),
+       url('fonts/PantasiaUnlicencedTrial-Regular.ttf') format('truetype');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+  position: relative;
+}
+
+.text {
+  position: relative;
+  width: 100%;
+  bottom: -280px;
+  letter-spacing: -4px;
+}
+
+.word {
+  font-size: 4.9rem; 
+  position: absolute;
+}
+
+.left {
+  left: 2%; 
+}
+
+.center {
+  left: 60%; 
+}
+
+.right {
+  right: 3%; 
+}
+  
+.submit-button {
+  position: absolute;
+  bottom: 280px;
+  right: 32.5%; 
+  letter-spacing: -1px;
+  padding: 10px 30px;
+  background-color: #6c7cff; 
+  color: white; 
+  border: none;
+  text-decoration: none; 
+  text-align: center;
+  display: inline-block;
+  font-size: 1rem; 
+  cursor: pointer;
+  transition: all ease-in-out .3s;
+}
+
+.submit-button:hover {
+  background-color: #000000; 
+  transform: scale(1.05);
+}
+
+/* Large screens (desktops) */
+@media (max-width: 1200px) {
+  .word {
+    font-size: 4rem;
+  }
+  
+  .submit-button {
+    right: 30%;
+  }
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 768px) {
+  .word {
+    font-size: 3rem;
+  }
+  
+  .center {
+    left: 55%;
+  }
+  
+  .text {
+    bottom: -220px;
+  }
+  
+  .submit-button {
+    bottom: 220px;
+    right: 25%;
+    padding: 8px 25px;
+  }
+}
+
+/* Small screens (large phones) */
+@media (max-width: 576px) {
+  .word {
+    font-size: 2.5rem;
+    letter-spacing: -2px;
+  }
+  
+  .left {
+    left: 5%;
+  }
+  
+  .center {
+    left: 50%;
+  }
+  
+  .right {
+    right: 5%;
+  }
+  
+  .text {
+    bottom: -180px;
+  }
+  
+  .submit-button {
+    bottom: 180px;
+    right: 20%;
+  }
+}
+
+/* Extra small screens (mobile phones) */
+@media (max-width: 450px) {
+  .text {
+    bottom: -150px;
+    letter-spacing: -2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 40%;
+  }
+  
+  .word {
+    position: relative;
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .left, .center, .right {
+    left: auto;
+    right: auto;
+  }
+  
+  .submit-button {
+    position: absolute;
+    bottom: 320px;
+    right: auto;
+    top: 65%;
+    padding: 8px 20px;
+    font-size: 0.9rem;
+  }
+}

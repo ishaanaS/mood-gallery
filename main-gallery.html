@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gallery</title>
+    <link rel="stylesheet" href="main-gallery.css">
+    <link rel="stylesheet" href="https://use.typekit.net/dfi3ntu.css">
+</head>
+<body>
+    <div class="head">
+        A space to explore and play with a growing collection of paintings. 
+        You can dig through the artwork, shuffle things around, and find 
+        your own connections—guided by mood, colors, movements and time.
+    </div>
+    <br>
+    <br>
+    <div id="sidebar">
+        <br>
+        
+         <div class="filter-container">
+             <label for="category-filter">Category:</label>
+             <select id="category-filter">
+                <option value="all">All</option>
+                <option value="contemporary">Contemporary</option>
+                <option value="modern">Modern</option>
+                <option value="abstract">Abstract</option>
+                <option value="impressionism">Impressionism</option>
+                <option value="expressionism">Expressionism</option>
+            </select>
+         </div>
+         <br>
+    
+         <div class="filter-container">
+             <label for="year-filter">Time Period:</label>
+             <select id="year-filter">
+                 <option value="all">All</option>
+                 <option value="1951">1950s</option>
+                 <option value="1970">1970s</option>
+                 <option value="2002">1890s</option>
+             </select>
+         </div>
+     
+        
+         <button id="organize-btn">Organize</button>
+     </div>
+   
+    <div id="gallery"></div>
+      
+<div class="footer">
+    <h4>THE ART VAULT</h4>
+</div>
+
+<script src="main-gallery.js"></script>
+</body>
+</html>
