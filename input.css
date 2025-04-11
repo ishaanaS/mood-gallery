@@ -168,7 +168,18 @@
     height: 24px;
  
   }
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+  }
   
+  .footer h2 {
+    font-size: 2rem;
+    margin-left: 20px;
+  }
  
   @media (max-width: 450px) {
 
@@ -181,18 +192,7 @@
         height: 20px;
       }
     }
-    .footer {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      padding: 10px;
-    }
-    
-    .footer h2 {
-      font-size: 2rem;
-      margin-left: 20px;
-    }
+   
     .main-row {
       flex-direction: column;
       gap: 40px;
