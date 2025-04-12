@@ -111,3 +111,20 @@ html, body {
     font-style: normal;
     margin-left: 20px;
   }
+
+  @media (max-width: 450px) {
+    *{
+        font-size: 10px;
+    }
+
+    .painting {
+    position: absolute;
+    width: 100px;
+    height: 66px;
+    border-radius: 4px;
+    object-fit: cover;
+    transition: all 0.5s ease;
+    transition: opacity 0.4s ease, transform 0.5s ease, top 0.5s ease, left 0.5s ease;
+    }
+
+  }
