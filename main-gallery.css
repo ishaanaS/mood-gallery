@@ -112,19 +112,48 @@ html, body {
     margin-left: 20px;
   }
 
-  @media (max-width: 450px) {
-    *{
-        font-size: 10px;
+  @media (max-width: 768px) {
+    #sidebar {
+        width: 100%;
+        position: relative;
+        margin-top: 200px;
+        margin-bottom: 20px;
+        padding-left: 20px;
+        height: auto;
     }
-
+    
+    #gallery {
+        margin-left: 0;
+        margin-top: 100px;
+    }
+    
+    .head {
+        width: 90%;
+    }
+    
     .painting {
-    position: absolute;
-    width: 100px;
-    height: 66px;
-    border-radius: 4px;
-    object-fit: cover;
-    transition: all 0.5s ease;
-    transition: opacity 0.4s ease, transform 0.5s ease, top 0.5s ease, left 0.5s ease;
+        width: 200px;
+        height: 133px;
     }
+    
+    #organize-btn {
+        position: static;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+}
 
-  }
+@media (max-width: 450px) {
+    .painting {
+        width: 150px;
+        height: 100px;
+    }
+    
+    .head {
+        font-size: 14px;
+    }
+    
+    .footer h4 {
+        font-size: 1.5rem;
+    }
+}

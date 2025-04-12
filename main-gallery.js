@@ -20,12 +20,10 @@ const paintings = [
     { title: "Painting 19", src: "images-input/cont 3.jpg", year: 1970, category: "contemporary" },
 ];
 
-
 const scatterBtn = document.getElementById('organize-btn');
 if (scatterBtn) {
     scatterBtn.textContent = 'Scatter';
 }
-
 
 function renderPaintings() {
     const selectedCategory = document.getElementById('category-filter').value;
@@ -34,14 +32,12 @@ function renderPaintings() {
     const gallery = document.getElementById('gallery');
     gallery.innerHTML = ''; // clear existing paintings
 
-
     const filteredPaintings = paintings.filter(painting => {
         const matchesCategory = selectedCategory === 'all' || painting.category === selectedCategory;
         const matchesYear = selectedYear === 'all' || painting.year.toString() === selectedYear;
         return matchesCategory && matchesYear;
     });
 
-  
     filteredPaintings.forEach(painting => {
         const img = document.createElement('img');
         img.src = painting.src;
@@ -50,40 +46,56 @@ function renderPaintings() {
         gallery.appendChild(img);
     });
 
-
     scatterPaintings();
+}
+
+function getPaintingSize() {
+    const screenWidth = window.innerWidth;
+    
+    if (screenWidth <= 450) {
+        return { width: 150, height: 100 };
+    } else if (screenWidth <= 768) {
+        return { width: 200, height: 133 };
+    } else {
+        return { width: 300, height: 200 };
+    }
 }
 
 function scatterPaintings() {
     const containerWidth = window.innerWidth;
-    const containerHeight = window.innerHeight * 2; // zyada height for scrolling
-    const paintingSize = 275;
+    const containerHeight = window.innerHeight * 2; // extra height for scrolling
+    const paintingSize = getPaintingSize();
+    const isMobile = window.innerWidth <= 768;
     
     document.querySelectorAll('.painting').forEach(painting => {
-        const maxX = containerWidth - paintingSize;
-        const maxY = containerHeight - paintingSize;
-        const minY = 30; // avoid overlap with header
+       
+        const maxX = containerWidth - paintingSize.width;
+        const maxY = containerHeight - paintingSize.height;
+        const minY = isMobile ? 300 : 30; // overlap stuff
         
         painting.style.left = `${Math.random() * maxX}px`;
         painting.style.top = `${Math.random() * (maxY - minY) + minY}px`;
         
-        // rotation 
         const rotation = (Math.random() - 0.5) * 30;
         painting.style.transform = `rotate(${rotation}deg)`;
     });
 }
 
-// scatter button 
+// scatter button
 if (scatterBtn) {
-   
     scatterBtn.replaceWith(scatterBtn.cloneNode(true));
     const newScatterBtn = document.getElementById('organize-btn');
     newScatterBtn.addEventListener('click', scatterPaintings);
 }
 
-//  dropdown filters
+// dropdown filters
 document.getElementById('category-filter').addEventListener('change', renderPaintings);
 document.getElementById('year-filter').addEventListener('change', renderPaintings);
+
+
+window.addEventListener('resize', () => {
+    setTimeout(scatterPaintings, 100);
+});
 
 
 renderPaintings();
