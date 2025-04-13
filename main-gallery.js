@@ -60,9 +60,9 @@ function scatterPaintings() {
     const paintingSize = 275;
     
     document.querySelectorAll('.painting').forEach(painting => {
-        const maxX = containerWidth - paintingSize.width;
-        const maxY = containerHeight - paintingSize.height;
-        const minY = isMobile ? 300 : 30; // avoid overlap with header
+        const maxX = containerWidth - paintingSize;
+        const maxY = containerHeight - paintingSize;
+        const minY = 30; // avoid overlap with header
         
         painting.style.left = `${Math.random() * maxX}px`;
         painting.style.top = `${Math.random() * (maxY - minY) + minY}px`;
@@ -84,10 +84,6 @@ if (scatterBtn) {
 //  dropdown filters
 document.getElementById('category-filter').addEventListener('change', renderPaintings);
 document.getElementById('year-filter').addEventListener('change', renderPaintings);
-
-window.addEventListener('resize', () => {
-    setTimeout(scatterPaintings, 100);
-});
 
 
 renderPaintings();
